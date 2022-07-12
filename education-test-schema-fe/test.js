@@ -4,31 +4,31 @@ const result = arrayToCount.filter(i => i === 2).length;
 console.log('total data paling banyak keluar adalah ' + i + ' dengan jumlah ' + result);
 
 
-function segitiga1(panjang) {
-    let hasil = '';
-    for (let i = 0; i < panjang; i++) {
+function leftTriangle(long) {
+    let result = '';
+    for (let i = 0; i < long; i++) {
         for (let j = 0; j <= i; j++) {
-            hasil += '* ';
+            result += '* ';
         }
-        hasil += '\n';
+        result += '\n';
     }
-    return hasil;
+    return result;
 }
 console.log('\n');
-console.log(segitiga1(6));
+console.log(leftTriangle(6));
 
-function segitiga2(panjang) {
-    let hasil = '';
-    for (let i = 1; i <= panjang; i++) {
-        for (let j = panjang-1; j >= i; j--) {
-            hasil += '  ';
+function rightTriangle(long) {
+    let result = '';
+    for (let i = 1; i <= long; i++) {
+        for (let j = long-1; j >= i; j--) {
+            result += '  ';
         }
         for (let k = 1; k <=i; k++){
-            hasil += ' *'
+            result += ' *'
         }
-        hasil += '\n';
+        result += '\n';
     }
-    return hasil;
+    return result;
 }
 console.log('\n');
-console.log(segitiga2(6));
+console.log(rightTriangle(6));
